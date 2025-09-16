@@ -1,0 +1,253 @@
+(base) s4913017@login0:~$ cat newdawnst.out
+PyTorch version: 2.7.1+cu118
+CUDA available: True
+Using device: cuda
+GPU: NVIDIA A100-PCIE-40GB
+============================================================
+FIXED CIFAR-10 DAWNBench Challenge - Proper OneCycle Schedule
+============================================================
+Setting up data loaders...
+Initializing model...
+Starting training for 30 epochs...
+Total steps: 11730
+[Step 100, Loss 1.81813] Train accuracy: 23.266%, LR: 0.008405
+[Step 200, Loss 1.62935] Train accuracy: 29.555%, LR: 0.010835
+[Step 300, Loss 1.65418] Train accuracy: 33.971%, LR: 0.013265
+Epoch [1/30] completed in 22.16s
+Train Loss: 1.6820, Train Acc: 37.14%, Test Acc: 48.33%
+Learning Rate: 0.015476
+Total Time: 22.16s
+--------------------------------------------------
+[Step 400, Loss 1.35376] Train accuracy: 50.000%, LR: 0.015694
+[Step 500, Loss 1.23599] Train accuracy: 51.993%, LR: 0.018124
+[Step 600, Loss 1.17277] Train accuracy: 54.273%, LR: 0.020554
+[Step 700, Loss 1.17025] Train accuracy: 55.906%, LR: 0.022983
+Epoch [2/30] completed in 21.91s
+Train Loss: 1.2046, Train Acc: 57.11%, Test Acc: 61.02%
+Learning Rate: 0.024976
+Total Time: 44.07s
+--------------------------------------------------
+[Step 800, Loss 1.09401] Train accuracy: 61.415%, LR: 0.025413
+[Step 900, Loss 0.89065] Train accuracy: 63.513%, LR: 0.027843
+[Step 1000, Loss 0.68980] Train accuracy: 65.288%, LR: 0.030272
+[Step 1100, Loss 0.87641] Train accuracy: 66.598%, LR: 0.032702
+Epoch [3/30] completed in 22.04s
+Train Loss: 0.9299, Train Acc: 67.35%, Test Acc: 68.42%
+Learning Rate: 0.034476
+Total Time: 66.11s
+--------------------------------------------------
+[Step 1200, Loss 0.82956] Train accuracy: 70.226%, LR: 0.035132
+[Step 1300, Loss 0.71632] Train accuracy: 72.152%, LR: 0.037561
+[Step 1400, Loss 0.88898] Train accuracy: 72.749%, LR: 0.039991
+[Step 1500, Loss 0.52869] Train accuracy: 73.698%, LR: 0.042421
+Epoch [4/30] completed in 22.12s
+Train Loss: 0.7615, Train Acc: 73.95%, Test Acc: 73.73%
+Learning Rate: 0.043976
+Total Time: 88.23s
+--------------------------------------------------
+[Step 1600, Loss 0.65783] Train accuracy: 77.995%, LR: 0.044850
+[Step 1700, Loss 0.86454] Train accuracy: 76.689%, LR: 0.047280
+[Step 1800, Loss 0.68401] Train accuracy: 77.185%, LR: 0.049710
+[Step 1900, Loss 0.57029] Train accuracy: 77.327%, LR: 0.052139
+Epoch [5/30] completed in 22.01s
+Train Loss: 0.6509, Train Acc: 77.56%, Test Acc: 75.99%
+Learning Rate: 0.053476
+Total Time: 110.23s
+--------------------------------------------------
+[Step 2000, Loss 0.69452] Train accuracy: 78.351%, LR: 0.054569
+[Step 2100, Loss 0.61566] Train accuracy: 79.224%, LR: 0.056999
+[Step 2200, Loss 0.49837] Train accuracy: 79.263%, LR: 0.059428
+[Step 2300, Loss 0.52341] Train accuracy: 79.592%, LR: 0.061858
+Epoch [6/30] completed in 22.03s
+Train Loss: 0.5901, Train Acc: 79.64%, Test Acc: 73.39%
+Learning Rate: 0.062976
+Total Time: 132.26s
+--------------------------------------------------
+[Step 2400, Loss 0.65089] Train accuracy: 80.874%, LR: 0.064288
+[Step 2500, Loss 0.42300] Train accuracy: 80.504%, LR: 0.066717
+[Step 2600, Loss 0.47604] Train accuracy: 80.875%, LR: 0.069147
+[Step 2700, Loss 0.57865] Train accuracy: 81.115%, LR: 0.071577
+Epoch [7/30] completed in 21.97s
+Train Loss: 0.5452, Train Acc: 81.19%, Test Acc: 79.35%
+Learning Rate: 0.072476
+Total Time: 154.24s
+--------------------------------------------------
+[Step 2800, Loss 0.43463] Train accuracy: 82.961%, LR: 0.074006
+[Step 2900, Loss 0.42394] Train accuracy: 82.736%, LR: 0.076436
+[Step 3000, Loss 0.42071] Train accuracy: 82.560%, LR: 0.078866
+[Step 3100, Loss 0.37749] Train accuracy: 82.815%, LR: 0.081295
+Epoch [8/30] completed in 21.96s
+Train Loss: 0.4977, Train Acc: 82.81%, Test Acc: 76.24%
+Learning Rate: 0.081976
+Total Time: 176.19s
+--------------------------------------------------
+[Step 3200, Loss 0.44168] Train accuracy: 84.060%, LR: 0.083725
+[Step 3300, Loss 0.49260] Train accuracy: 83.321%, LR: 0.086155
+[Step 3400, Loss 0.44411] Train accuracy: 83.240%, LR: 0.088584
+[Step 3500, Loss 0.38662] Train accuracy: 83.348%, LR: 0.091014
+Epoch [9/30] completed in 21.94s
+Train Loss: 0.4863, Train Acc: 83.34%, Test Acc: 78.82%
+Learning Rate: 0.091476
+Total Time: 198.13s
+--------------------------------------------------
+[Step 3600, Loss 0.55723] Train accuracy: 84.886%, LR: 0.093444
+[Step 3700, Loss 0.41310] Train accuracy: 84.625%, LR: 0.095873
+[Step 3800, Loss 0.36228] Train accuracy: 84.122%, LR: 0.098303
+[Step 3900, Loss 0.44344] Train accuracy: 84.051%, LR: 0.100733
+Epoch [10/30] completed in 22.02s
+Train Loss: 0.4716, Train Acc: 84.05%, Test Acc: 80.09%
+Learning Rate: 0.100976
+Total Time: 220.16s
+--------------------------------------------------
+[Step 4000, Loss 0.46407] Train accuracy: 84.010%, LR: 0.103162
+[Step 4100, Loss 0.28656] Train accuracy: 84.375%, LR: 0.105592
+[Step 4200, Loss 0.44152] Train accuracy: 84.205%, LR: 0.108022
+[Step 4300, Loss 0.43669] Train accuracy: 84.161%, LR: 0.110451
+Epoch [11/30] completed in 21.98s
+Train Loss: 0.4658, Train Acc: 84.16%, Test Acc: 73.46%
+Learning Rate: 0.110476
+Total Time: 242.13s
+--------------------------------------------------
+[Step 4400, Loss 0.40416] Train accuracy: 84.912%, LR: 0.112881
+[Step 4500, Loss 0.67915] Train accuracy: 84.202%, LR: 0.115311
+[Step 4600, Loss 0.39023] Train accuracy: 84.046%, LR: 0.117740
+Epoch [12/30] completed in 22.01s
+Train Loss: 0.4675, Train Acc: 84.04%, Test Acc: 76.90%
+Learning Rate: 0.119976
+Total Time: 264.14s
+--------------------------------------------------
+[Step 4700, Loss 0.42527] Train accuracy: 83.887%, LR: 0.119843
+[Step 4800, Loss 0.50051] Train accuracy: 84.896%, LR: 0.117600
+[Step 4900, Loss 0.38815] Train accuracy: 84.807%, LR: 0.115357
+[Step 5000, Loss 0.61180] Train accuracy: 84.865%, LR: 0.113115
+Epoch [13/30] completed in 21.98s
+Train Loss: 0.4485, Train Acc: 84.73%, Test Acc: 76.60%
+Learning Rate: 0.111253
+Total Time: 286.12s
+--------------------------------------------------
+[Step 5100, Loss 0.48408] Train accuracy: 85.386%, LR: 0.110872
+[Step 5200, Loss 0.44385] Train accuracy: 85.617%, LR: 0.108629
+[Step 5300, Loss 0.48823] Train accuracy: 85.307%, LR: 0.106386
+[Step 5400, Loss 0.50602] Train accuracy: 85.228%, LR: 0.104144
+Epoch [14/30] completed in 21.96s
+Train Loss: 0.4272, Train Acc: 85.41%, Test Acc: 77.02%
+Learning Rate: 0.102484
+Total Time: 308.07s
+--------------------------------------------------
+[Step 5500, Loss 0.39285] Train accuracy: 86.839%, LR: 0.101901
+[Step 5600, Loss 0.36481] Train accuracy: 86.235%, LR: 0.099658
+[Step 5700, Loss 0.30347] Train accuracy: 86.297%, LR: 0.097415
+[Step 5800, Loss 0.40359] Train accuracy: 86.304%, LR: 0.095173
+Epoch [15/30] completed in 21.97s
+Train Loss: 0.4020, Train Acc: 86.38%, Test Acc: 83.51%
+Learning Rate: 0.093715
+Total Time: 330.05s
+--------------------------------------------------
+[Step 5900, Loss 0.41928] Train accuracy: 87.746%, LR: 0.092930
+[Step 6000, Loss 0.38769] Train accuracy: 87.656%, LR: 0.090687
+[Step 6100, Loss 0.37594] Train accuracy: 87.463%, LR: 0.088444
+[Step 6200, Loss 0.24792] Train accuracy: 87.292%, LR: 0.086201
+Epoch [16/30] completed in 21.96s
+Train Loss: 0.3741, Train Acc: 87.44%, Test Acc: 82.38%
+Learning Rate: 0.084946
+Total Time: 352.01s
+--------------------------------------------------
+[Step 6300, Loss 0.40537] Train accuracy: 88.601%, LR: 0.083959
+[Step 6400, Loss 0.31041] Train accuracy: 88.118%, LR: 0.081716
+[Step 6500, Loss 0.22888] Train accuracy: 87.951%, LR: 0.079473
+[Step 6600, Loss 0.45958] Train accuracy: 87.882%, LR: 0.077230
+Epoch [17/30] completed in 22.05s
+Train Loss: 0.3552, Train Acc: 87.86%, Test Acc: 80.47%
+Learning Rate: 0.076176
+Total Time: 374.06s
+--------------------------------------------------
+[Step 6700, Loss 0.35395] Train accuracy: 89.475%, LR: 0.074988
+[Step 6800, Loss 0.35217] Train accuracy: 89.011%, LR: 0.072745
+[Step 6900, Loss 0.34608] Train accuracy: 88.831%, LR: 0.070502
+[Step 7000, Loss 0.19580] Train accuracy: 88.700%, LR: 0.068259
+Epoch [18/30] completed in 22.09s
+Train Loss: 0.3300, Train Acc: 88.75%, Test Acc: 82.63%
+Learning Rate: 0.067407
+Total Time: 396.15s
+--------------------------------------------------
+[Step 7100, Loss 0.29994] Train accuracy: 90.184%, LR: 0.066017
+[Step 7200, Loss 0.17194] Train accuracy: 89.873%, LR: 0.063774
+[Step 7300, Loss 0.41835] Train accuracy: 89.814%, LR: 0.061531
+[Step 7400, Loss 0.29101] Train accuracy: 89.826%, LR: 0.059288
+Epoch [19/30] completed in 22.08s
+Train Loss: 0.2958, Train Acc: 89.84%, Test Acc: 87.19%
+Learning Rate: 0.058638
+Total Time: 418.24s
+--------------------------------------------------
+[Step 7500, Loss 0.32965] Train accuracy: 91.318%, LR: 0.057045
+[Step 7600, Loss 0.55306] Train accuracy: 90.840%, LR: 0.054803
+[Step 7700, Loss 0.22475] Train accuracy: 90.781%, LR: 0.052560
+[Step 7800, Loss 0.22253] Train accuracy: 90.777%, LR: 0.050317
+Epoch [20/30] completed in 22.05s
+Train Loss: 0.2734, Train Acc: 90.74%, Test Acc: 87.42%
+Learning Rate: 0.049869
+Total Time: 440.29s
+--------------------------------------------------
+[Step 7900, Loss 0.15267] Train accuracy: 92.002%, LR: 0.048074
+[Step 8000, Loss 0.15888] Train accuracy: 92.001%, LR: 0.045832
+[Step 8100, Loss 0.22701] Train accuracy: 91.911%, LR: 0.043589
+[Step 8200, Loss 0.23642] Train accuracy: 91.924%, LR: 0.041346
+Epoch [21/30] completed in 22.08s
+Train Loss: 0.2372, Train Acc: 91.95%, Test Acc: 88.64%
+Learning Rate: 0.041099
+Total Time: 462.38s
+--------------------------------------------------
+[Step 8300, Loss 0.24597] Train accuracy: 93.574%, LR: 0.039103
+[Step 8400, Loss 0.20001] Train accuracy: 92.977%, LR: 0.036861
+[Step 8500, Loss 0.24805] Train accuracy: 92.825%, LR: 0.034618
+[Step 8600, Loss 0.13714] Train accuracy: 92.929%, LR: 0.032375
+Epoch [22/30] completed in 22.08s
+Train Loss: 0.2068, Train Acc: 92.93%, Test Acc: 88.49%
+Learning Rate: 0.032330
+Total Time: 484.45s
+--------------------------------------------------
+[Step 8700, Loss 0.14438] Train accuracy: 94.340%, LR: 0.030132
+[Step 8800, Loss 0.13559] Train accuracy: 94.472%, LR: 0.027889
+[Step 8900, Loss 0.16291] Train accuracy: 94.348%, LR: 0.025647
+Epoch [23/30] completed in 22.05s
+Train Loss: 0.1653, Train Acc: 94.44%, Test Acc: 90.97%
+Learning Rate: 0.023561
+Total Time: 506.50s
+--------------------------------------------------
+[Step 9000, Loss 0.11042] Train accuracy: 94.866%, LR: 0.023404
+[Step 9100, Loss 0.08283] Train accuracy: 95.758%, LR: 0.021161
+[Step 9200, Loss 0.12628] Train accuracy: 95.614%, LR: 0.018918
+[Step 9300, Loss 0.18419] Train accuracy: 95.623%, LR: 0.016676
+Epoch [24/30] completed in 22.03s
+Train Loss: 0.1262, Train Acc: 95.65%, Test Acc: 92.67%
+Learning Rate: 0.014792
+Total Time: 528.53s
+--------------------------------------------------
+[Step 9400, Loss 0.07428] Train accuracy: 97.363%, LR: 0.014433
+[Step 9500, Loss 0.08833] Train accuracy: 97.117%, LR: 0.012190
+[Step 9600, Loss 0.04794] Train accuracy: 97.038%, LR: 0.009947
+[Step 9700, Loss 0.09557] Train accuracy: 97.083%, LR: 0.007705
+Epoch [25/30] completed in 22.04s
+Train Loss: 0.0874, Train Acc: 97.14%, Test Acc: 93.45%
+Learning Rate: 0.006022
+Total Time: 550.57s
+--------------------------------------------------
+TARGET ACHIEVED! Test accuracy: 93.45%
+Training completed in 550.6 seconds (9.2 minutes)
+
+Training completed!
+Total training time: 550.57 seconds (9.18 minutes)
+Final test accuracy: 93.45%
+Target achieved: YES
+
+============================================================
+FINAL RESULTS
+============================================================
+Training time: 550.57 seconds (9.18 minutes)
+Final accuracy: 93.45%
+Target achieved: YES
+Inference time (10 batches): 0.3518 seconds
+Inference accuracy: 93.44%
+
+Model saved as 'fixed_cifar10_model.pth'
+(base) s4913017@login0:~$
