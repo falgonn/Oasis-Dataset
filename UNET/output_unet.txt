@@ -1,0 +1,152 @@
+(comp3710) PS Microsoft.PowerShell.Core\FileSystem::\\puffball.labs.eait.uq.edu.au\s4913017\Documents\comp3710-recognition> python dawn2.py
+Using device: cuda
+Creating aggressively regularized datasets...
+Found 9664 images in C:/Users/s4913017/Downloads/keras_png_slices_data/keras_png_slices_data\keras_png_slices_train
+Found 9664 valid image-mask pairs
+Found 1120 images in C:/Users/s4913017/Downloads/keras_png_slices_data/keras_png_slices_data\keras_png_slices_validate
+Found 1120 valid image-mask pairs
+Found 544 images in C:/Users/s4913017/Downloads/keras_png_slices_data/keras_png_slices_data\keras_png_slices_test
+Found 544 valid image-mask pairs
+Visualizing augmented training samples...
+Initializing Aggressively Regularized UNet model...
+Total parameters: 13,390,404
+Trainable parameters: 13,390,404
+Starting aggressively regularized training...
+AGGRESSIVE REGULARIZATION TRAINING CONFIGURATION:
+- Initial Learning Rate: 5e-05
+- Weight Decay: 0.0005
+- Dropout Rate: 0.4
+- Data Augmentation Probability: 80%
+- Early Stopping Patience: 20
+- LR Scheduler: Step every 15 epochs, gamma=0.7
+------------------------------------------------------------
+Epoch 1/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 1/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:04<00:00,  6.60it/s, Loss=0.2892]
+Epoch 1/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 1/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:22<00:00,  8.39it/s, Loss=0.2987]
+Epoch [1/100]
+Train Loss: 0.5983, Val Loss: 0.2529
+Train/Val Loss Ratio: 2.37 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9853, Class 1: 0.5303, Class 2: 0.6223, Class 3: 0.8112
+Overall Dice: 0.7373, LR: 0.000050
+✓ New best model saved with Dice: 0.7373
+------------------------------------------------------------
+Epoch 2/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 2/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:05<00:00,  6.56it/s, Loss=0.1822]
+Epoch 2/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 2/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:23<00:00,  8.12it/s, Loss=0.1403]
+Epoch [2/100]
+Train Loss: 0.2836, Val Loss: 0.1227
+Train/Val Loss Ratio: 2.31 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9910, Class 1: 0.7518, Class 2: 0.8535, Class 3: 0.9142
+Overall Dice: 0.8776, LR: 0.000050
+✓ New best model saved with Dice: 0.8776
+------------------------------------------------------------
+Epoch 3/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 3/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:04<00:00,  6.59it/s, Loss=0.1737]
+Epoch 3/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 3/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:22<00:00,  8.38it/s, Loss=0.1264]
+Epoch [3/100]
+Train Loss: 0.2197, Val Loss: 0.1034
+Train/Val Loss Ratio: 2.12 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9917, Class 1: 0.7690, Class 2: 0.8643, Class 3: 0.9211
+Overall Dice: 0.8865, LR: 0.000050
+✓ New best model saved with Dice: 0.8865
+------------------------------------------------------------
+Epoch 4/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 4/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:03<00:00,  6.60it/s, Loss=0.3743]
+Epoch 4/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 4/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:23<00:00,  8.09it/s, Loss=0.1142]
+Epoch [4/100]
+Train Loss: 0.1915, Val Loss: 0.0847
+Train/Val Loss Ratio: 2.26 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9929, Class 1: 0.7905, Class 2: 0.8950, Class 3: 0.9426
+Overall Dice: 0.9053, LR: 0.000050
+✓ New best model saved with Dice: 0.9053
+------------------------------------------------------------
+Epoch 5/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 5/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:07<00:00,  6.52it/s, Loss=0.1280]
+Epoch 5/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 5/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:22<00:00,  8.26it/s, Loss=0.1014]
+Epoch [5/100]
+Train Loss: 0.1761, Val Loss: 0.0721
+Train/Val Loss Ratio: 2.44 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9929, Class 1: 0.8149, Class 2: 0.9203, Class 3: 0.9552
+Overall Dice: 0.9208, LR: 0.000050
+✓ New best model saved with Dice: 0.9208
+------------------------------------------------------------
+Epoch 6/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 6/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:04<00:00,  6.59it/s, Loss=0.1364]
+Epoch 6/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 6/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:22<00:00,  8.30it/s, Loss=0.1053]
+Epoch [6/100]
+Train Loss: 0.1687, Val Loss: 0.0681
+Train/Val Loss Ratio: 2.48 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9937, Class 1: 0.8239, Class 2: 0.9223, Class 3: 0.9567
+Overall Dice: 0.9242, LR: 0.000050
+✓ New best model saved with Dice: 0.9242
+------------------------------------------------------------
+Epoch 7/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 7/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:03<00:00,  6.61it/s, Loss=0.1186]
+Epoch 7/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 7/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:22<00:00,  8.32it/s, Loss=0.0995]
+Epoch [7/100]
+Train Loss: 0.1599, Val Loss: 0.0653
+Train/Val Loss Ratio: 2.45 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9937, Class 1: 0.8366, Class 2: 0.9299, Class 3: 0.9603
+Overall Dice: 0.9301, LR: 0.000050
+✓ New best model saved with Dice: 0.9301
+------------------------------------------------------------
+Epoch 8/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 8/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:05<00:00,  6.55it/s, Loss=0.1800]
+Epoch 8/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 8/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:23<00:00,  8.07it/s, Loss=0.0918]
+Epoch [8/100]
+Train Loss: 0.1559, Val Loss: 0.0634
+Train/Val Loss Ratio: 2.46 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9943, Class 1: 0.8328, Class 2: 0.9222, Class 3: 0.9591
+Overall Dice: 0.9271, LR: 0.000050
+No improvement for 1/20 epochs
+------------------------------------------------------------
+Epoch 9/100 [Train] LR:0.000050:   0%|                                                        | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 9/100 [Train] LR:0.000050: 100%|████████████████████████████████| 1611/1611 [04:08<00:00,  6.49it/s, Loss=0.1223]
+Epoch 9/100 [Val]:   0%|                                                                       | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 9/100 [Val]: 100%|████████████████████████████████████████████████| 187/187 [00:23<00:00,  8.06it/s, Loss=0.0884]
+Epoch [9/100]
+Train Loss: 0.1531, Val Loss: 0.0612
+Train/Val Loss Ratio: 2.50 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9945, Class 1: 0.8516, Class 2: 0.9318, Class 3: 0.9612
+Overall Dice: 0.9348, LR: 0.000050
+✓ New best model saved with Dice: 0.9348
+------------------------------------------------------------
+Epoch 10/100 [Train] LR:0.000050:   0%|                                                       | 0/1611 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 10/100 [Train] LR:0.000050: 100%|███████████████████████████████| 1611/1611 [04:03<00:00,  6.61it/s, Loss=0.2374]
+Epoch 10/100 [Val]:   0%|                                                                      | 0/187 [00:00<?, ?it/s]Using device: cuda
+Using device: cuda
+Epoch 10/100 [Val]: 100%|███████████████████████████████████████████████| 187/187 [00:22<00:00,  8.26it/s, Loss=0.0869]
+Epoch [10/100]
+Train Loss: 0.1467, Val Loss: 0.0625
+Train/Val Loss Ratio: 2.35 (>1.0 indicates good regularization)
+Dice Scores - Class 0: 0.9944, Class 1: 0.8496, Class 2: 0.9269, Class 3: 0.9604
+Overall Dice: 0.9328, LR: 0.000050
+No improvement for 1/20 epochs
+------------------------------------------------------------
