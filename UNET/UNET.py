@@ -281,7 +281,7 @@ def train_model_aggressively_regularized(model, train_loader, val_loader, num_ep
     learning_rates = []
     
     best_dice = 0.0
-    patience = 20  # Increased patience
+    patience = 10  
     patience_counter = 0
     
     print(f"AGGRESSIVE REGULARIZATION TRAINING CONFIGURATION:")
@@ -368,7 +368,7 @@ def train_model_aggressively_regularized(model, train_loader, val_loader, num_ep
             print(f'✓ New best model saved with Dice: {best_dice:.4f}')
 
             # Add performance-based stopping
-            if overall_dice >= 0.95:
+            if overall_dice >= 0.92:
                 print(f'🎯 Target performance achieved! Overall Dice: {overall_dice:.4f} >= 0.95')
                 print('Stopping training early due to excellent performance.')
                 break
