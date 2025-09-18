@@ -18,15 +18,11 @@ print(f"Using device: {device}")
 if torch.cuda.is_available():
     print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-# Keep your original data loading (it was good!)
-def get_data_loaders(batch_size=128):  # Back to 128 like reference
-    """
-    Your original data loading was actually good - keeping it
-    """
+def get_data_loaders(batch_size=128):
+    
     mean = [0.4914, 0.4822, 0.4465]
     std = [0.2023, 0.1994, 0.2010]
 
-    # Your original transforms were fine, adding one key improvement
     train_transform = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(p=0.5),
@@ -47,10 +43,9 @@ def get_data_loaders(batch_size=128):  # Back to 128 like reference
         root='./data', train=False, download=True, transform=test_transform
     )
 
-    # Fix the worker warning but keep good performance
     train_loader = DataLoader(
         train_dataset, batch_size=batch_size, shuffle=True,
-        num_workers=1, pin_memory=True  # Reduced workers for cluster
+        num_workers=1, pin_memory=True
     )
 
     test_loader = DataLoader(
@@ -60,7 +55,6 @@ def get_data_loaders(batch_size=128):  # Back to 128 like reference
 
     return train_loader, test_loader
 
-# Your original ResNet was good! Just minor fixes
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -134,12 +128,9 @@ class ResNet18(nn.Module):
         out = self.fc(out)
         return out
 
-# THE KEY FIX: Proper OneCycle LR implementation matching the JAX reference
 def linear_onecycle_schedule(step, total_steps, peak_value=0.1, pct_start=0.3, 
                            pct_final=0.85, div_factor=25., final_div_factor=1e4):
-    """
-    Matches the JAX reference OneCycle schedule exactly
-    """
+  
     initial_lr = peak_value / div_factor
     final_lr = initial_lr / final_div_factor
     
@@ -161,10 +152,8 @@ def linear_onecycle_schedule(step, total_steps, peak_value=0.1, pct_start=0.3,
     
     return max(lr, final_lr)
 
-def train_fixed_cifar10(epochs=30, batch_size=128):  # Reduced epochs for time limit
-    """
-    Fixed CIFAR-10 training using the correct OneCycle schedule from reference
-    """
+def train_fixed_cifar10(epochs=30, batch_size=128):
+    
     print("Setting up data loaders...")
     train_loader, test_loader = get_data_loaders(batch_size)
 
@@ -174,10 +163,8 @@ def train_fixed_cifar10(epochs=30, batch_size=128):  # Reduced epochs for time l
     # Mixed precision
     scaler = torch.amp.GradScaler('cuda') if device.type == 'cuda' else None
 
-    # CRITICAL: Match the reference code exactly
     total_steps = len(train_loader) * epochs
     
-    # SGD with momentum (like reference) - but with proper weight decay
     optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9, weight_decay=5e-4)
     
     # Standard cross entropy (no label smoothing initially)
@@ -207,11 +194,11 @@ def train_fixed_cifar10(epochs=30, batch_size=128):  # Reduced epochs for time l
             # CRITICAL: Update learning rate every step, not every epoch
             current_lr = linear_onecycle_schedule(
                 global_step, total_steps, 
-                peak_value=0.12,  # Slightly higher peak for faster convergence
-                pct_start=12./epochs,  # Faster warmup: 12/30 = 0.4
-                pct_final=25./epochs,  # Faster annealing: 25/30 = 0.83
-                div_factor=20.,        # Match reference
-                final_div_factor=200.  # Match reference
+                peak_value=0.12,
+                pct_start=12./epochs,  
+                pct_final=25./epochs,  
+                div_factor=20.,       
+                final_div_factor=200. 
             )
             
             for param_group in optimizer.param_groups:
@@ -240,7 +227,7 @@ def train_fixed_cifar10(epochs=30, batch_size=128):  # Reduced epochs for time l
 
             global_step += 1
 
-            # Print progress every 100 steps like reference
+            # Print progress every 100 steps
             if global_step % 100 == 0:
                 train_accuracy = 100. * correct / total
                 print(f'[Step {global_step}, Loss {loss:.5f}] Train accuracy: {train_accuracy:.3f}%, LR: {current_lr:.6f}')
@@ -250,7 +237,7 @@ def train_fixed_cifar10(epochs=30, batch_size=128):  # Reduced epochs for time l
         epoch_acc = 100. * correct / total
         train_losses.append(epoch_loss)
 
-        # Validation phase - exactly like reference
+      
         model.eval()
         test_correct = 0
         test_total = 0
@@ -302,10 +289,9 @@ def main():
     Fixed main function
     """
     print("=" * 60)
-    print("FIXED CIFAR-10 DAWNBench Challenge - Proper OneCycle Schedule")
+    print("CIFAR-10 DAWNBench Challenge")
     print("=" * 60)
 
-    # Use the corrected training function - reduced epochs for time constraint
     model, final_accuracy, training_time = train_fixed_cifar10(epochs=30, batch_size=128)
 
     # Quick test
