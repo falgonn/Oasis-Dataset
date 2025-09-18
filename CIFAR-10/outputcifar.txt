@@ -4,7 +4,7 @@ CUDA available: True
 Using device: cuda
 GPU: NVIDIA A100-PCIE-40GB
 ============================================================
-FIXED CIFAR-10 DAWNBench Challenge - Proper OneCycle Schedule
+CIFAR-10 DAWNBench Challenge
 ============================================================
 Setting up data loaders...
 Initializing model...
