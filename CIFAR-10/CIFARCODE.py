@@ -19,6 +19,33 @@ if torch.cuda.is_available():
     print(f"GPU: {torch.cuda.get_device_name(0)}")
 
 def get_data_loaders(batch_size=128):
+
+    """
+    import torch
+    import torchvision
+    import torchvision.transforms as transforms
+
+    # Load CIFAR-10 without normalization
+    transform = transforms.Compose([transforms.ToTensor()])
+    dataset = torchvision.datasets.CIFAR10(root='./data', train=True,
+                                       download=True, transform=transform)
+    dataloader = torch.utils.data.DataLoader(dataset, batch_size=1000, shuffle=False)
+
+    # Calculate mean and std
+    channels_sum, channels_squared_sum, num_batches = 0, 0, 0
+
+    for data, _ in dataloader:
+        # data shape: [batch_size, channels, height, width]
+        channels_sum += torch.mean(data, dim=[0, 2, 3])
+        channels_squared_sum += torch.mean(data**2, dim=[0, 2, 3])
+        num_batches += 1
+
+    mean = channels_sum / num_batches
+    std = (channels_squared_sum / num_batches - mean**2)**0.5
+
+    print(f"Mean: {mean}")  # this will give [0.4914, 0.4822, 0.4465]
+    print(f"Std: {std}")    # this will give [0.2023, 0.1994, 0.2010]
+    """
     
     mean = [0.4914, 0.4822, 0.4465]
     std = [0.2023, 0.1994, 0.2010]
